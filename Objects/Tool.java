@@ -1,16 +1,19 @@
 package Objects;
 
+import java.math.BigDecimal;
+
 import Enums.ToolCode;
 
 public class Tool {
     private ToolCode toolCode;
     private String toolType;
     private String brand;
-    private float dailyCharge;
+    private BigDecimal dailyCharge;
     private boolean weekendCharge;
     private boolean holidayCharge;
     
-    public Tool (ToolCode toolCode, String toolType, String brand, float dailyCharge, boolean weekendCharge, boolean holidayCharge) {
+    public Tool() {}
+    public Tool (ToolCode toolCode, String toolType, String brand, BigDecimal dailyCharge, boolean weekendCharge, boolean holidayCharge) {
         this.toolCode = toolCode;
         this.toolType = toolType;
         this.brand = brand;
@@ -40,10 +43,10 @@ public class Tool {
         this.brand = brand;
     }
 
-    public float getDailyCharge() {
+    public BigDecimal getDailyCharge() {
         return dailyCharge;
     }
-    public void setDailyCharge(float dailyCharge) {
+    public void setDailyCharge(BigDecimal dailyCharge) {
         this.dailyCharge = dailyCharge;
     }
 

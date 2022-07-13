@@ -16,23 +16,26 @@ import src.main.java.hequals.tools.Objects.Tool;
 
 public class RentalAgreementOperations {
 
-    public static String[] printRentalAgreement(Tool tool, int rentalDays, BigDecimal discountPercentage, LocalDate checkOutDate) {
-        int chargeDays = calculateChargeDays(tool, checkOutDate, rentalDays);
-        BigDecimal preDiscountCharge = calculatePreDiscountCharge(tool.getDailyCharge(), chargeDays);
-        BigDecimal discountAmount = calculateDiscountAmount(preDiscountCharge, discountPercentage);
-        String[] printOrder = new String[] {"Tool code - " + tool.getToolCode().name(),
-                                            "Tool type - " + tool.getToolType(),
-                                            "Tool brand - " + tool.getBrand(),
-                                            "Rental Days - " + String.valueOf(rentalDays),
-                                            "Check out date - " + formatDate(checkOutDate),
-                                            "Due date - " + formatDate(determineDueDate(checkOutDate, rentalDays)),
-                                            "Daily rental charge - " + formatCurrency(tool.getDailyCharge()),
-                                            "Charge days - " + String.valueOf(chargeDays),
-                                            "Pre-discount charge - " + formatCurrency(preDiscountCharge),
-                                            "Discount percent - " + discountPercentage.toPlainString() + "%",
-                                            "Discount amount - " + formatCurrency(discountAmount),
-                                            "Final Charge - " + formatCurrency(calculateFinalCharge(preDiscountCharge, discountAmount))};
-        Arrays.asList(printOrder).forEach(System.out::println);
-        return printOrder;
-    }
+  public static String[] printRentalAgreement(Tool tool, int rentalDays, BigDecimal discountPercentage,
+      LocalDate checkOutDate) {
+    int chargeDays = calculateChargeDays(tool, checkOutDate, rentalDays);
+    BigDecimal preDiscountCharge = calculatePreDiscountCharge(tool.getDailyCharge(), chargeDays);
+    BigDecimal discountAmount = calculateDiscountAmount(preDiscountCharge, discountPercentage);
+    String[] printOrder = new String[] {
+        "Tool code - " + tool.getToolCode().name(),
+        "Tool type - " + tool.getToolType(),
+        "Tool brand - " + tool.getBrand(),
+        "Rental Days - " + String.valueOf(rentalDays),
+        "Check out date - " + formatDate(checkOutDate),
+        "Due date - " + formatDate(determineDueDate(checkOutDate, rentalDays)),
+        "Daily rental charge - " + formatCurrency(tool.getDailyCharge()),
+        "Charge days - " + String.valueOf(chargeDays),
+        "Pre-discount charge - " + formatCurrency(preDiscountCharge),
+        "Discount percent - " + discountPercentage.toPlainString() + "%",
+        "Discount amount - " + formatCurrency(discountAmount),
+        "Final Charge - " + formatCurrency(calculateFinalCharge(preDiscountCharge, discountAmount))
+    };
+    Arrays.asList(printOrder).forEach(System.out::println);
+    return printOrder;
+  }
 }

@@ -1,18 +1,18 @@
-package src.main.java.hequals.tools.Operations;
+package hequals.tools.Operations;
 
-import static src.main.java.hequals.tools.Operations.CurrencyOperations.calculateDiscountAmount;
-import static src.main.java.hequals.tools.Operations.CurrencyOperations.calculateFinalCharge;
-import static src.main.java.hequals.tools.Operations.CurrencyOperations.calculatePreDiscountCharge;
-import static src.main.java.hequals.tools.Operations.CurrencyOperations.formatCurrency;
-import static src.main.java.hequals.tools.Operations.DateOperations.calculateChargeDays;
-import static src.main.java.hequals.tools.Operations.DateOperations.determineDueDate;
-import static src.main.java.hequals.tools.Operations.DateOperations.formatDate;
+import static hequals.tools.Operations.CurrencyOperations.calculateDiscountAmount;
+import static hequals.tools.Operations.CurrencyOperations.calculateFinalCharge;
+import static hequals.tools.Operations.CurrencyOperations.calculatePreDiscountCharge;
+import static hequals.tools.Operations.CurrencyOperations.formatCurrency;
+import static hequals.tools.Operations.DateOperations.calculateChargeDays;
+import static hequals.tools.Operations.DateOperations.determineDueDate;
+import static hequals.tools.Operations.DateOperations.formatDate;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Arrays;
 
-import src.main.java.hequals.tools.Objects.Tool;
+import hequals.tools.Objects.Tool;
 
 public class RentalAgreementOperations {
 

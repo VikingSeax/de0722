@@ -1,18 +1,18 @@
-package src.main.java.hequals.tools;
+package hequals.tools;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 
-import src.main.java.hequals.tools.Enums.ToolCode;
-import src.main.java.hequals.tools.Exceptions.InvalidRentalDaysException;
-import src.main.java.hequals.tools.Exceptions.PercentageOutOfBoundsException;
-import src.main.java.hequals.tools.Objects.Chainsaw;
-import src.main.java.hequals.tools.Objects.Jackhammer;
-import src.main.java.hequals.tools.Objects.Ladder;
-import src.main.java.hequals.tools.Objects.Tool;
-import src.main.java.hequals.tools.Operations.RentalAgreementOperations;
+import hequals.tools.Enums.ToolCode;
+import hequals.tools.Exceptions.InvalidRentalDaysException;
+import hequals.tools.Exceptions.PercentageOutOfBoundsException;
+import hequals.tools.Objects.Chainsaw;
+import hequals.tools.Objects.Jackhammer;
+import hequals.tools.Objects.Ladder;
+import hequals.tools.Objects.Tool;
+import hequals.tools.Operations.RentalAgreementOperations;
 
 public class ToolRental {
   public static void main(String[] args) {

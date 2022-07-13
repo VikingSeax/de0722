@@ -1,8 +1,8 @@
-package src.main.java.hequals.tools.Objects;
+package hequals.tools.Objects;
 
 import java.math.BigDecimal;
 
-import src.main.java.hequals.tools.Enums.ToolCode;
+import hequals.tools.Enums.ToolCode;
 
 public class Jackhammer extends Tool {
   public Jackhammer(ToolCode toolCode) {

@@ -1,4 +1,4 @@
-package Exceptions;
+package src.main.java.hequals.tools.Exceptions;
 
 import java.math.BigDecimal;
 

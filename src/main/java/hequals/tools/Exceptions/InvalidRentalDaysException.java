@@ -1,4 +1,4 @@
-package Exceptions;
+package src.main.java.hequals.tools.Exceptions;
 
 public class InvalidRentalDaysException extends Exception {
     public InvalidRentalDaysException(int days) {

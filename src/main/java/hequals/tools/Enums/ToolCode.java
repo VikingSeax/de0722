@@ -1,4 +1,4 @@
-package Enums;
+package src.main.java.hequals.tools.Enums;
 
 public enum ToolCode {
     CHNS,

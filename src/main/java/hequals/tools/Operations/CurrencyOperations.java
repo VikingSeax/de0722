@@ -1,4 +1,4 @@
-package Operations;
+package src.main.java.hequals.tools.Operations;
 
 import java.math.BigDecimal;
 import java.math.MathContext;

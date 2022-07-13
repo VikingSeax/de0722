@@ -1,8 +1,8 @@
-package Objects;
+package src.main.java.hequals.tools.Objects;
 
 import java.math.BigDecimal;
 
-import Enums.ToolCode;
+import src.main.java.hequals.tools.Enums.ToolCode;
 
 public class Tool {
     private ToolCode toolCode;

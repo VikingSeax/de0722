@@ -1,16 +1,17 @@
+package src.main.java.hequals.tools;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 
-import Enums.ToolCode;
-import Exceptions.PercentageOutOfBoundsException;
-import Objects.Chainsaw;
-import Objects.Jackhammer;
-import Objects.Ladder;
-import Objects.Tool;
-import Operations.RentalAgreementOperations;
-import Exceptions.InvalidRentalDaysException;
+import src.main.java.hequals.tools.Enums.ToolCode;
+import src.main.java.hequals.tools.Exceptions.InvalidRentalDaysException;
+import src.main.java.hequals.tools.Exceptions.PercentageOutOfBoundsException;
+import src.main.java.hequals.tools.Objects.Chainsaw;
+import src.main.java.hequals.tools.Objects.Jackhammer;
+import src.main.java.hequals.tools.Objects.Ladder;
+import src.main.java.hequals.tools.Objects.Tool;
+import src.main.java.hequals.tools.Operations.RentalAgreementOperations;
 
 public class ToolRental {
     public static void main(String[] args) {
@@ -21,7 +22,7 @@ public class ToolRental {
         
         System.out.print("Tool code - ");
         toolCode = System.console().readLine();
-        System.out.print("Rental day code - ");
+        System.out.print("Rental day count - ");
         rentalDays = System.console().readLine();
         System.out.print("Discount percent - ");
         discountPercentage = System.console().readLine();
@@ -29,13 +30,13 @@ public class ToolRental {
         checkOutDate = System.console().readLine();
 
         try {
-            checkValuesAndProceed(ToolCode.valueOf(toolCode), Integer.parseInt(rentalDays), new BigDecimal(discountPercentage), LocalDate.parse(checkOutDate, DateTimeFormatter.ofPattern("mm/dd/yy")));
+            checkValuesAndProceed(ToolCode.valueOf(toolCode), Integer.parseInt(rentalDays), new BigDecimal(discountPercentage), LocalDate.parse(checkOutDate, DateTimeFormatter.ofPattern("M/d/yy")));
         } catch (NumberFormatException e) {
             System.out.println(e.getMessage());
         } catch (DateTimeParseException e) {
             System.out.println(e.getMessage());
         } catch (Exception e) {
-            e.getMessage();
+            System.out.println(e.getMessage());
         }
     }
 
@@ -46,6 +47,7 @@ public class ToolRental {
         //checks if the discount percentage is less than zero, or larger than 100, and throws an exception if so
         if(discountPercentage.compareTo(BigDecimal.ZERO) == -1 || discountPercentage.compareTo(new BigDecimal(100)) == 1)
             throw new PercentageOutOfBoundsException(discountPercentage);
+
         Tool tool;
         switch(toolCode.name().charAt(0)) {
             case 'L':
@@ -61,6 +63,7 @@ public class ToolRental {
                 tool = new Tool();
                 break;
         }
+        
         return RentalAgreementOperations.printRentalAgreement(tool, rentalDays, discountPercentage, checkOutDate);
     }
 }

@@ -1,4 +1,4 @@
-package Operations;
+package src.main.java.hequals.tools.Operations;
 
 import static java.time.temporal.TemporalAdjusters.firstInMonth;
 
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import Objects.Tool;
+import src.main.java.hequals.tools.Objects.Tool;
 
 public class DateOperations {
 

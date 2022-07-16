@@ -25,7 +25,7 @@ public class RentalAgreementOperations {
         "Tool code - " + tool.getToolCode().name(),
         "Tool type - " + tool.getToolType(),
         "Tool brand - " + tool.getBrand(),
-        "Rental Days - " + String.valueOf(rentalDays),
+        "Rental days - " + String.valueOf(rentalDays),
         "Check out date - " + formatDate(checkOutDate),
         "Due date - " + formatDate(determineDueDate(checkOutDate, rentalDays)),
         "Daily rental charge - " + formatCurrency(tool.getDailyCharge()),
@@ -33,7 +33,7 @@ public class RentalAgreementOperations {
         "Pre-discount charge - " + formatCurrency(preDiscountCharge),
         "Discount percent - " + discountPercentage.toPlainString() + "%",
         "Discount amount - " + formatCurrency(discountAmount),
-        "Final Charge - " + formatCurrency(calculateFinalCharge(preDiscountCharge, discountAmount))
+        "Final charge - " + formatCurrency(calculateFinalCharge(preDiscountCharge, discountAmount))
     };
     Arrays.asList(printOrder).forEach(System.out::println);
     return printOrder;

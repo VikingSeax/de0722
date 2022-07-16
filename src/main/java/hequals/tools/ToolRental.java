@@ -29,6 +29,7 @@ public class ToolRental {
     discountPercentage = System.console().readLine();
     System.out.print("Check out date - ");
     checkOutDate = System.console().readLine();
+    System.out.print("\n");
 
     try {
       checkValuesAndProceed(ToolCode.valueOf(toolCode), Integer.parseInt(rentalDays),
